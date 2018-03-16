@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>{{ todo.todo }}</h1>
+  <div style="float: right">
+  <a routerLink="/todos" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-home"></span></a>
+  </div>
+    <dl class="list">
+    <dt>Date</dt>
+    <dt>{{ todo.published_date }}</dt>
+  </dl>
+  <div class="row">
+  <div class="col-md-12">
+    <a [routerLink]="['/todo-edit', todo._id]" class="btn btn-success">EDIT</a>
+    <button class="btn btn-danger" type="button"
+     (click)="deleteTodo(todo._id)">DELETE</button>
+  </div>
+</div>
+</div>
